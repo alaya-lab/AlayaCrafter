@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0c">
-  <meta name="description" content="AlayaCrafter: Open-source 3D Foundation Model for AI-Native Game Engine.">
-  <title>AlayaCrafter: Open-source 3D Foundation Model for AI-Native Game Engine</title>
+  <meta name="description" content="AlayaCrafter: An Open-Source 3D Foundation Stack for AI-Native Games.">
+  <title>AlayaCrafter: An Open-Source 3D Foundation Stack for AI-Native Games</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
@@ -64,14 +64,18 @@
 <style id="project-author-affiliations">
 .saga-footer-authors{text-align:center}
 .saga-footer-authors .saga-paper-authors{justify-content:center;gap:4px 24px}
-.saga-footer-authors .saga-paper-corresponding{flex-wrap:nowrap;gap:4px 32px;margin-top:6px}
+.saga-footer-authors .saga-paper-last-authors{flex-wrap:nowrap;gap:4px 32px;margin-top:6px}
 .saga-footer-authors .saga-paper-authors sup{margin-left:3px;font-size:.62em;line-height:1}
-.saga-paper-affiliations{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;list-style:none;margin:18px 0 0;padding:0;color:#aeb6c6;font:400 13px/1.55 var(--sans)}
-.saga-paper-affiliations li{display:inline-flex;align-items:baseline;gap:4px}
-.saga-paper-affiliations sup{position:relative;top:-.4em;font-size:.72em;line-height:1}
 .saga-paper-author-note{margin:14px 0 2px;color:#aeb6c6;font:400 12px/1.5 var(--sans)}
-@media(max-width:600px){.saga-footer-authors .saga-paper-authors{gap:2px 18px}.saga-footer-authors .saga-paper-corresponding{gap:4px 8px}.saga-footer-authors .saga-paper-corresponding a{font-size:clamp(10.4px,3.25vw,15px)}.saga-paper-affiliations{font-size:11px;gap:6px 14px;margin-top:14px}.saga-paper-author-note{font-size:11px}}
+@media(max-width:600px){.saga-footer-authors .saga-paper-authors{gap:2px 18px}.saga-footer-authors .saga-paper-last-authors{gap:4px 8px}.saga-footer-authors .saga-paper-last-authors a{font-size:clamp(10.4px,3.25vw,15px)}.saga-paper-author-note{font-size:11px}}
 </style>
+<style id="saga-scene-description-layout">
+#saga-panel .workflow-description{grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:32px}
+#saga-panel .workflow-description>div{min-width:0}
+#saga-title{max-width:none}
+@media(max-width:1023px){#saga-panel .workflow-description{grid-template-columns:minmax(0,1fr);gap:18px}}
+</style>
+<meta property="og:title" content="AlayaCrafter: An Open-Source 3D Foundation Stack for AI-Native Games">
 </head>
 <body class="library-page saga-page">
   <a class="skip-link" href="https://alaya-lab.github.io/AlayaCrafter/#main">Skip to content</a>
@@ -88,9 +92,9 @@
   <main id="main">
     <section class="saga-paper-hero" aria-labelledby="saga-heading">
       <div class="wrap">
-        <h1 id="saga-heading">Open-source 3D Foundation Model <span>for AI-Native Game Engine</span></h1>
+        <h1 id="saga-heading">AlayaCrafter: An Open-Source 3D Foundation Stack <span>for AI-Native Games</span></h1>
         <details class="project-tldr">
-          <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why This Model?</span></summary>
+          <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why This Stack?</span></summary>
           <div class="project-tldr-content">
             <p><strong>Agent-efficient geometry.</strong>Compact meshes are designed to lower agents' data and token costs compared with dense high-poly assets.</p>
             <p><strong>Structure for video models.</strong>Our scene renders already give H3 enough structure to add appearance and detail.</p>
@@ -154,24 +158,18 @@
   <footer class="site-footer">
     <div class="wrap saga-footer-authors">
       <ul class="saga-paper-authors saga-paper-primary" aria-label="Authors">
-        <li><a href="https://scholar.google.com/citations?user=lwuwuAYAAAAJ" target="_blank" rel="noopener noreferrer"><span>Yonghao Yu</span><sup>1,2</sup></a></li>
-        <li><a href="https://auroraryan0301.github.io/" target="_blank" rel="noopener noreferrer"><span>Ruihan Yu</span><sup>1,2</sup></a></li>
-        <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer"><span>Sho Kuno</span><sup>1,2</sup></a></li>
-        <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer"><span>Muyao Niu</span><sup>1,2</sup></a></li>
-        <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer"><span>Yu-Ju Tsai</span><sup>3,4</sup></a></li>
-        <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer"><span>Zheng-Hui Huang</span><sup>1</sup></a></li>
-        <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer"><span>Runyi Li</span><sup>1,2</sup></a></li>
+        <li><a href="https://scholar.google.com/citations?user=lwuwuAYAAAAJ" target="_blank" rel="noopener noreferrer"><span>Yonghao Yu</span></a></li>
+        <li><a href="https://auroraryan0301.github.io/" target="_blank" rel="noopener noreferrer"><span>Ruihan Yu</span></a></li>
+        <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer"><span>Sho Kuno</span></a></li>
+        <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer"><span>Muyao Niu</span></a></li>
+        <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer"><span>Yu-Ju Tsai</span></a></li>
+        <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer"><span>Zheng-Hui Huang</span></a></li>
+        <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer"><span>Runyi Li</span></a></li>
       </ul>
-      <ul class="saga-paper-authors saga-paper-corresponding" aria-label="Corresponding authors">
-        <li><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank" rel="noopener noreferrer"><span>Ming-Hsuan Yang</span><sup>4†</sup></a></li>
-        <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer"><span>Kaipeng Zhang</span><sup>1†</sup></a></li>
-        <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer"><span>Zhixiang Wang</span><sup>1†</sup></a></li>
-      </ul>
-      <ul class="saga-paper-affiliations" aria-label="Author affiliations">
-        <li><sup>1</sup><span>Alaya Lab</span></li>
-        <li><sup>2</sup><span>The University of Tokyo</span></li>
-        <li><sup>3</sup><span>Institute of Science Tokyo</span></li>
-        <li><sup>4</sup><span>University of California, Merced</span></li>
+      <ul class="saga-paper-authors saga-paper-last-authors" aria-label="Authors">
+        <li><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank" rel="noopener noreferrer"><span>Ming-Hsuan Yang</span></a></li>
+        <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer"><span>Kaipeng Zhang</span><sup>†</sup></a></li>
+        <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer"><span>Zhixiang Wang</span><sup>†</sup></a></li>
       </ul>
       <p class="saga-paper-author-note">† Corresponding authors</p>
     </div>
