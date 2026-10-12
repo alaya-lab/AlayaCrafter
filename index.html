@@ -15,6 +15,52 @@
   <link rel="stylesheet" href="library.css">
   <link rel="stylesheet" href="saga.css?v=geometry-v52-r1-20261011">
   <script type="module" src="saga.js?v=geometry-v52-r1-20261011"></script>
+<style id="project-header-layout">
+.saga-paper-hero{padding:84px 24px 12px;text-align:center}
+.saga-paper-hero .wrap{max-width:1080px}
+.saga-paper-hero h1{font:600 clamp(26px,3vw,44px)/1.14 var(--sans);letter-spacing:-.035em}
+.saga-paper-hero h1 span{display:block}
+.project-tldr{max-width:940px;margin:10px auto 0;font:14px/1.6 var(--sans);text-align:left}
+.project-tldr summary{width:fit-content;margin:auto;display:flex;align-items:center;gap:8px;color:#aeb6c6;font:500 12px/1.5 var(--sans);cursor:pointer;list-style:none}
+.project-tldr summary::-webkit-details-marker{display:none}
+.project-tldr summary svg{width:12px;height:12px;transition:transform .15s}
+.project-tldr[open] summary svg{transform:rotate(90deg)}
+.project-tldr summary:hover{color:#f5f6f8}
+.project-tldr-content{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;padding:18px 20px;border:1px solid #ffffff18;border-radius:12px;background:#101116}
+.project-tldr-content p{color:#aeb6c6;font:14px/1.6 var(--sans)}
+.project-tldr-content strong{display:block;margin-bottom:4px;color:#eef0f6;font-weight:600}
+.saga-paper-hero + .saga-trailer{padding-top:0}
+.saga-trailer-frame{min-height:0;max-width:min(var(--max),calc(177.777778svh - 480px));aspect-ratio:16/9}
+.saga-trailer-status:empty{display:none}
+@media(max-width:650px){.saga-paper-hero{padding:80px 18px 12px}.saga-paper-hero h1{font-size:clamp(24px,5.7vw,34px)}.project-tldr-content{grid-template-columns:1fr;gap:14px;padding:16px}.saga-trailer{padding-inline:18px}.saga-trailer-frame{aspect-ratio:16/9;min-height:0;max-width:100%}.saga-trailer-titles h2{font-size:clamp(28px,8vw,44px);margin:10px 0 18px}.saga-trailer-cover{padding:16px}.project-tldr summary{font-size:11px}}
+@media(max-height:560px) and (orientation:landscape){.saga-paper-hero{padding:72px 20px 8px}.saga-paper-hero h1{font-size:22px;line-height:1.12}.project-tldr{margin-top:6px}.project-tldr summary{font-size:11px}.saga-trailer-frame{max-width:min(var(--max),calc(177.777778svh - 337.777778px))}.saga-trailer-cover{padding:10px}.saga-trailer-titles>span{font-size:11px}.saga-trailer-titles h2{font-size:32px;margin:7px 0 12px}#saga-trailer-sound{min-height:36px;padding:8px 16px;font-size:12px}}
+</style>
+<style id="h3-showcase-layout">
+.h3-showcase{padding:44px 30px 32px;border-top:1px solid #ffffff12;scroll-margin-top:82px}
+.h3-showcase-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}
+.h3-showcase-heading h2{font:600 clamp(23px,2.6vw,32px)/1.2 var(--sans);letter-spacing:-.02em}
+.h3-showcase-heading p{margin-top:8px;color:#aeb6c6;font:14px/1.6 var(--sans)}
+.h3-showcase-label{display:block;margin-bottom:7px;color:#8693a8;font:11px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.h3-showcase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.h3-showcase-card{overflow:hidden;min-width:0;border:1px solid #ffffff1b;border-radius:12px;background:#0d0f14}
+.h3-showcase-card video{display:block;width:100%;aspect-ratio:7/4;object-fit:contain;background:#08090d}
+.h3-showcase-card figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;border-top:1px solid #ffffff12;font:500 14px/1.4 var(--sans);color:#e0e5ee}
+.h3-showcase-card figcaption span{color:#7f8c9f;font-size:11px}
+.h3-showcase-card{margin:0}
+.h3-showcase-transport{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;font:13px/1.4 var(--sans)}
+.h3-showcase-transport button,.h3-showcase-styles button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 13px;border:1px solid #ffffff2b;border-radius:8px;background:#ffffff04;font:500 12px/1.4 var(--sans)}
+.h3-showcase-transport button:hover,.h3-showcase-styles button:hover{border-color:#ffffff60;background:#ffffff0c}
+.h3-showcase-transport svg{width:14px;height:14px}
+.h3-showcase-transport input{flex:1;min-width:140px;accent-color:#c5d9f0}
+.h3-showcase-transport output{color:#aeb6c6;font:12px/1.4 var(--mono);font-variant-numeric:tabular-nums}
+.h3-showcase-styles{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:16px;color:#8693a8;font:12px/1.4 var(--sans)}
+.h3-showcase-styles>span{margin-right:5px}
+.h3-showcase-styles button{border-radius:999px;min-height:34px;padding:6px 12px}
+.h3-showcase-styles button[aria-pressed=true]{color:#eef0f6;background:#ffffff12;border-color:#ffffff60}
+.h3-showcase-status{min-height:1em;margin:10px 0 0;color:#aeb6c6;font:12px/1.5 var(--sans)}
+.h3-showcase-status:empty{display:none}
+@media(max-width:700px){.h3-showcase{padding:30px 18px}.h3-showcase-heading{align-items:start;flex-direction:column;gap:10px}.h3-showcase-grid{grid-template-columns:1fr;gap:12px}.h3-showcase-transport input{order:5;flex-basis:100%}.h3-showcase-card figcaption{padding:12px 14px}}
+</style>
 </head>
 <body class="library-page saga-page">
   <a class="skip-link" href="https://alaya-lab.github.io/AlayaCrafter/#main">Skip to content</a>
@@ -24,14 +70,21 @@
       <a class="brand" href="https://github.com/AlayaLab/AlayaCrafter/tree/main" aria-label="AlayaCrafter repository on GitHub"><img src="assets/alaya-logo.png" alt="" width="28" height="28"><span>AlayaCrafter</span></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
       <div class="nav-links" id="nav-links">
-        <a href="https://alaya-lab.github.io/AlayaCrafter/#saga">Twelve acts</a><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Asset library</a><a href="https://github.com/AlayaLab">AlayaLab</a>
+        <a href="https://alaya-lab.github.io/AlayaCrafter/#saga">Twelve acts</a><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Asset library</a><a href="https://alayalab.ai">AlayaLab</a>
       </div>
     </nav>
   </header>
   <main id="main">
     <section class="saga-paper-hero" aria-labelledby="saga-heading">
       <div class="wrap">
-        <h1 id="saga-heading" style="font-size:clamp(40px,4.5vw,64px);text-wrap:balance">A Space Game Created By AI</h1>
+        <h1 id="saga-heading">Open-source 3D Foundation Model <span>for AI-Native Game Engine</span></h1>
+        <details class="project-tldr">
+          <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why an AI-Native Game Engine?</span></summary>
+          <div class="project-tldr-content">
+            <p><strong>Agent-efficient geometry.</strong>Compact meshes with explicit triangle connectivity and a controllable face budget give agents a practical 3D state to inspect, edit and assemble.</p>
+            <p><strong>Scene structure for video models.</strong>Authored cameras and motion turn these meshes into structural video inputs. Models such as H3 add appearance and style while the underlying 3D scene stays editable.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="saga-trailer" aria-label="Trailer">
@@ -50,7 +103,7 @@
         <div class="saga-project-summary">
           <dl class="library-stats"><div><dt>Acts</dt><dd>12</dd></div><div><dt>Generated assets</dt><dd>123</dd></div></dl>
         </div>
-        <div class="saga-credits"><p>Produced by AlayaCrafter at <a href="https://github.com/AlayaLab">AlayaLab</a>.</p><p>Production workflow, tools and models — open source soon.</p></div>
+        <div class="saga-credits"><p>Produced by AlayaCrafter at <a href="https://alayalab.ai">AlayaLab</a>.</p><p>Production workflow, tools and models — open source soon.</p></div>
       </div>
     </section>
     <section id="saga" class="workflow-section section-divider" aria-labelledby="saga-title">
@@ -72,6 +125,20 @@
         <p class="space-assembly-note">All twelve scenes use AlayaCrafter generated meshes with their original topology.</p>
       </div>
     </section>
+      <section class="h3-showcase" id="h3-showcase" aria-labelledby="h3-showcase-title">
+      <div class="wrap">
+        <div class="h3-showcase-heading"><div><span class="h3-showcase-label">The hive awakens · Style studies</span><h2 id="h3-showcase-title">Render with H3</h2><p>Gray meshes define the scene. H3 explores its visual style.</p></div></div>
+        <div class="h3-showcase-grid">
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="gray" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.webp" controls muted playsinline preload="none" aria-label="The hive awakens: gray mesh"></video><figcaption>Gray mesh<span>Generated geometry</span></figcaption></figure>
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="materials" src="https://alayacraftertest.y0uroy.chatgpt.site/alaya-kit/assets/saga/act9_hive_awakens-material.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-materials.webp" controls muted playsinline preload="none" aria-label="The hive awakens: materials"></video><figcaption>Materials<span>3D render</span></figcaption></figure>
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="h3" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.webp" controls muted playsinline preload="none" aria-label="The hive awakens: H3 dark fantasy"></video><figcaption>H3 render<span id="h3-showcase-style-label">Dark fantasy</span></figcaption></figure>
+        </div>
+        <div class="h3-showcase-transport"><button type="button" id="h3-showcase-play" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 8 5-8 5Z"/></svg><span>Play all</span></button><button type="button" id="h3-showcase-replay">Replay</button><input id="h3-showcase-timeline" type="range" min="0" max="14.375" step="0.0416666667" value="0" aria-label="H3 comparison shared timeline"><output id="h3-showcase-time">0:00 / 0:14</output></div>
+        <div class="h3-showcase-styles" role="group" aria-label="H3 visual style"><span>H3 style</span><button type="button" data-h3-style="dark-fantasy" aria-pressed="true">Dark fantasy</button><button type="button" data-h3-style="bioluminescent" aria-pressed="false">Bioluminescent</button><button type="button" data-h3-style="clay" aria-pressed="false">Clay animation</button></div>
+        <p class="h3-showcase-status" id="h3-showcase-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
   </main>
   <footer class="site-footer">
     <div class="wrap saga-footer-authors">
@@ -81,13 +148,135 @@
         <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer">Sho Kuno</a></li>
         <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer">Muyao Niu</a></li>
         <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer">Yu-Ju Tsai</a></li>
+        <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer">Zheng-Hui Huang</a></li>
         <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer">Runyi Li</a></li>
         <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer">Kaipeng Zhang</a></li>
         <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer">Zhixiang Wang</a></li>
       </ul>
     </div>
-    <div class="wrap footer-inner"><a class="footer-brand" href="https://github.com/AlayaLab/AlayaCrafter/tree/main" aria-label="AlayaCrafter repository on GitHub"><img src="assets/alaya-logo.png" alt="" width="34" height="34"><div><strong>AlayaLab</strong><span>AlayaCrafter</span></div></a><p>Explicit geometry. Generative worlds.</p><div class="footer-links"><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Space asset library</a><a href="https://github.com/AlayaLab">AlayaLab</a></div></div>
+    <div class="wrap footer-inner"><a class="footer-brand" href="https://alayalab.ai" aria-label="AlayaLab website"><img src="assets/alaya-logo.png" alt="" width="34" height="34"><div><strong>AlayaLab</strong><span>AlayaCrafter</span></div></a><p>Explicit geometry. Generative worlds.</p><div class="footer-links"><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Space asset library</a><a href="https://alayalab.ai">AlayaLab</a></div></div>
   </footer>
   <noscript><p class="noscript-note">Enable JavaScript to play the acts.</p></noscript>
+<script id="h3-showcase-controller">
+(() => {
+  const section = document.getElementById('h3-showcase');
+  if (!section) return;
+  const videos = [...section.querySelectorAll('video')];
+  const master = videos[0], rendered = videos[2];
+  const playButton = document.getElementById('h3-showcase-play');
+  const timeline = document.getElementById('h3-showcase-timeline');
+  const output = document.getElementById('h3-showcase-time');
+  const status = document.getElementById('h3-showcase-status');
+  const styles = { 'dark-fantasy': 'Dark fantasy', bioluminescent: 'Bioluminescent', clay: 'Clay animation' };
+  const origin = 'https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/';
+  let running = false, updating = false, pending = false, generation = 0, raf = 0;
+  const clock = t => '0:' + String(Math.floor(t || 0)).padStart(2, '0');
+  function reflect() {
+    const t = master.currentTime || 0;
+    timeline.value = String(t);
+    output.value = clock(t) + ' / 0:14';
+    playButton.setAttribute('aria-pressed', String(running));
+    playButton.querySelector('span').textContent = running ? 'Pause all' : 'Play all';
+    playButton.querySelector('svg').innerHTML = running ? '<path d="M5 3v10M11 3v10"/>' : '<path d="m5 3 8 5-8 5Z"/>';
+  }
+  function pause() {
+    generation++;
+    running = false;
+    updating = true;
+    videos.forEach(v => v.pause());
+    updating = false;
+    cancelAnimationFrame(raf);
+    reflect();
+  }
+  function seek(t, except = null) {
+    updating = true;
+    videos.forEach(v => {
+      if (v !== except && v.readyState >= 1 && Math.abs(v.currentTime - t) > 0.055) v.currentTime = Math.max(0, Math.min(t, v.duration - 1 / 24));
+    });
+    updating = false;
+    reflect();
+  }
+  function ready(v) {
+    if (v.readyState >= 2 && !v.seeking) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => done(new Error('Video loading timed out. Please try again.')), 20000);
+      const events = ['loadeddata', 'canplay', 'seeked'];
+      const done = error => { clearTimeout(timer); events.forEach(e => v.removeEventListener(e, loaded)); v.removeEventListener('error', failed); error ? reject(error) : resolve(); };
+      const loaded = () => { if (v.readyState >= 2 && !v.seeking) done(); };
+      const failed = () => done(new Error('This video could not load. Please try again.'));
+      events.forEach(e => v.addEventListener(e, loaded));
+      v.addEventListener('error', failed, { once: true });
+      v.preload = 'auto';
+      if (v.networkState === 0 || v.networkState === 3) v.load();
+      loaded();
+    });
+  }
+  function tick() {
+    if (!running) return;
+    if (master.ended) { pause(); return; }
+    seek(master.currentTime, master);
+    raf = requestAnimationFrame(tick);
+  }
+  async function play() {
+    if (pending) return;
+    const ticket = ++generation;
+    pending = true;
+    status.textContent = 'Loading videos…';
+    try {
+      await Promise.all(videos.map(ready));
+      if (ticket !== generation) return;
+      if (master.ended || master.currentTime > 14.3) seek(0);
+      updating = true;
+      await Promise.all(videos.map(v => v.play()));
+      updating = false;
+      if (ticket !== generation) { pause(); return; }
+      running = true;
+      status.textContent = '';
+      reflect();
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(tick);
+    } catch (error) { updating = false; pause(); status.textContent = error.message; }
+    finally { pending = false; if (!running && status.textContent === 'Loading videos…') status.textContent = ''; }
+  }
+  playButton.addEventListener('click', () => running || pending ? pause() : void play());
+  document.getElementById('h3-showcase-replay').addEventListener('click', () => { pause(); seek(0); void play(); });
+  timeline.addEventListener('input', () => seek(Number(timeline.value)));
+  // The existing scene player exempts data-ambient videos from its single-film
+  // arbitration. This comparison owns their transport and visibility instead.
+  document.addEventListener('play', event => {
+    if (!(event.target instanceof HTMLVideoElement)) return;
+    if (videos.includes(event.target)) {
+      document.querySelectorAll('video:not([data-ambient])').forEach(v => v.pause());
+    } else if (!('ambient' in event.target.dataset)) pause();
+  }, true);
+  videos.forEach(v => {
+    v.muted = true;
+    v.addEventListener('play', () => { if (!updating && !running && !pending) void play(); });
+    v.addEventListener('pause', () => { if (!updating && running) pause(); });
+    v.addEventListener('seeking', () => { if (!updating && v === master) seek(v.currentTime, v); });
+    v.addEventListener('ended', pause);
+  });
+  section.querySelectorAll('[data-h3-style]').forEach(button => button.addEventListener('click', async () => {
+    const style = button.dataset.h3Style;
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    const wasRunning = running, time = master.currentTime || 0;
+    pause();
+    const ticket = generation;
+    section.querySelectorAll('[data-h3-style]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    document.getElementById('h3-showcase-style-label').textContent = styles[style];
+    rendered.poster = origin + 'act9-' + style + '.webp';
+    rendered.src = origin + 'act9-' + style + '.mp4';
+    rendered.load();
+    rendered.setAttribute('aria-label', 'The hive awakens: H3 ' + styles[style]);
+    status.textContent = '';
+    try { await ready(rendered); if (ticket !== generation) return; seek(time); if (wasRunning) void play(); }
+    catch (error) { if (ticket === generation) status.textContent = error.message; }
+  }));
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
+  new IntersectionObserver(entries => { if (!entries[0].isIntersecting) pause(); }, { threshold: 0 }).observe(section);
+  window.addEventListener('pagehide', pause);
+  reflect();
+})();
+</script>
 </body>
 </html>
