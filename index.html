@@ -47,19 +47,19 @@
 .h3-showcase-card figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;border-top:1px solid #ffffff12;font:500 14px/1.4 var(--sans);color:#e0e5ee}
 .h3-showcase-card figcaption span{color:#7f8c9f;font-size:11px}
 .h3-showcase-card{margin:0}
-.h3-showcase-transport{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;font:13px/1.4 var(--sans)}
-.h3-showcase-transport button,.h3-showcase-styles button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 13px;border:1px solid #ffffff2b;border-radius:8px;background:#ffffff04;font:500 12px/1.4 var(--sans)}
-.h3-showcase-transport button:hover,.h3-showcase-styles button:hover{border-color:#ffffff60;background:#ffffff0c}
-.h3-showcase-transport svg{width:14px;height:14px}
-.h3-showcase-transport input{flex:1;min-width:140px;accent-color:#c5d9f0}
-.h3-showcase-transport output{color:#aeb6c6;font:12px/1.4 var(--mono);font-variant-numeric:tabular-nums}
+.h3-showcase-transport{margin-top:16px;border:1px solid var(--line);border-radius:12px}
+#h3-showcase-time{font:10px var(--mono);color:#a6b3c7;font-variant-numeric:tabular-nums;white-space:nowrap}
+#h3-showcase-timeline{display:block;width:100%;height:5px;accent-color:#d4deed;cursor:pointer;margin:0}
+#h3-showcase-timeline:focus-visible{outline:2px solid white;outline-offset:7px}
+.h3-showcase-styles button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 13px;border:1px solid #ffffff2b;border-radius:8px;background:#ffffff04;font:500 12px/1.4 var(--sans)}
+.h3-showcase-styles button:hover{border-color:#ffffff60;background:#ffffff0c}
 .h3-showcase-styles{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:16px;color:#8693a8;font:12px/1.4 var(--sans)}
 .h3-showcase-styles>span{margin-right:5px}
 .h3-showcase-styles button{border-radius:999px;min-height:34px;padding:6px 12px}
 .h3-showcase-styles button[aria-pressed=true]{color:#eef0f6;background:#ffffff12;border-color:#ffffff60}
 .h3-showcase-status{min-height:1em;margin:10px 0 0;color:#aeb6c6;font:12px/1.5 var(--sans)}
 .h3-showcase-status:empty{display:none}
-@media(max-width:700px){.h3-showcase{padding:30px 18px}.h3-showcase-heading{align-items:start;flex-direction:column;gap:10px}.h3-showcase-grid{grid-template-columns:1fr;gap:12px}.h3-showcase-transport input{order:5;flex-basis:100%}.h3-showcase-card figcaption{padding:12px 14px}}
+@media(max-width:700px){.h3-showcase{padding:30px 18px}.h3-showcase-heading{align-items:start;flex-direction:column;gap:10px}.h3-showcase-grid{grid-template-columns:1fr;gap:12px}.h3-showcase-card figcaption{padding:12px 14px}}
 </style>
 </head>
 <body class="library-page saga-page">
@@ -81,8 +81,8 @@
         <details class="project-tldr">
           <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why an AI-Native Game Engine?</span></summary>
           <div class="project-tldr-content">
-            <p><strong>Agent-efficient geometry.</strong>Compact meshes with explicit triangle connectivity and a controllable face budget give agents a practical 3D state to inspect, edit and assemble.</p>
-            <p><strong>Scene structure for video models.</strong>Authored cameras and motion turn these meshes into structural video inputs. Models such as H3 add appearance and style while the underlying 3D scene stays editable.</p>
+            <p><strong>Agent-efficient geometry.</strong>Compact meshes are designed to lower agents' data and token costs compared with dense high-poly assets.</p>
+            <p><strong>Structure for video models.</strong>Our scene renders already give H3 enough structure to add appearance and detail.</p>
           </div>
         </details>
       </div>
@@ -129,12 +129,12 @@
       <div class="wrap">
         <div class="h3-showcase-heading"><div><span class="h3-showcase-label">The hive awakens · Style studies</span><h2 id="h3-showcase-title">Render with H3</h2><p>Gray meshes define the scene. H3 explores its visual style.</p></div></div>
         <div class="h3-showcase-grid">
-          <figure class="h3-showcase-card"><video data-ambient data-h3-role="gray" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.webp" controls muted playsinline preload="none" aria-label="The hive awakens: gray mesh"></video><figcaption>Gray mesh<span>Generated geometry</span></figcaption></figure>
-          <figure class="h3-showcase-card"><video data-ambient data-h3-role="materials" src="https://alayacraftertest.y0uroy.chatgpt.site/alaya-kit/assets/saga/act9_hive_awakens-material.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-materials.webp" controls muted playsinline preload="none" aria-label="The hive awakens: materials"></video><figcaption>Materials<span>3D render</span></figcaption></figure>
-          <figure class="h3-showcase-card"><video data-ambient data-h3-role="h3" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.webp" controls muted playsinline preload="none" aria-label="The hive awakens: H3 dark fantasy"></video><figcaption>H3 render<span id="h3-showcase-style-label">Dark fantasy</span></figcaption></figure>
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="gray" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-gray.webp" controls muted loop playsinline preload="none" aria-label="The hive awakens: gray mesh"></video><figcaption>Gray mesh<span>Generated geometry</span></figcaption></figure>
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="materials" src="https://alayacraftertest.y0uroy.chatgpt.site/alaya-kit/assets/saga/act9_hive_awakens-material.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-materials.webp" controls muted loop playsinline preload="none" aria-label="The hive awakens: materials"></video><figcaption>Materials<span>3D render</span></figcaption></figure>
+          <figure class="h3-showcase-card"><video data-ambient data-h3-role="h3" src="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.mp4" poster="https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/act9-dark-fantasy.webp" controls muted loop playsinline preload="none" aria-label="The hive awakens: H3 dark fantasy"></video><figcaption>H3 render<span id="h3-showcase-style-label">Dark fantasy</span></figcaption></figure>
         </div>
-        <div class="h3-showcase-transport"><button type="button" id="h3-showcase-play" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 8 5-8 5Z"/></svg><span>Play all</span></button><button type="button" id="h3-showcase-replay">Replay</button><input id="h3-showcase-timeline" type="range" min="0" max="14.375" step="0.0416666667" value="0" aria-label="H3 comparison shared timeline"><output id="h3-showcase-time">0:00 / 0:14</output></div>
-        <div class="h3-showcase-styles" role="group" aria-label="H3 visual style"><span>H3 style</span><button type="button" data-h3-style="dark-fantasy" aria-pressed="true">Dark fantasy</button><button type="button" data-h3-style="bioluminescent" aria-pressed="false">Bioluminescent</button><button type="button" data-h3-style="clay" aria-pressed="false">Clay animation</button></div>
+        <div class="workflow-transport h3-showcase-transport"><div class="workflow-playback"><button type="button" id="h3-showcase-play" aria-label="Play the rendering stages together" aria-pressed="false"><span aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span data-h3-play-label>Play all</span></button><output id="h3-showcase-time" for="h3-showcase-timeline">0:00.0 / 0:14.3</output><span class="workflow-sync-label">SHARED TIMELINE</span></div><input id="h3-showcase-timeline" type="range" min="0" max="14.375" step="0.0416666667" value="0" aria-label="Shared timeline for H3 comparison"></div>
+        <div class="h3-showcase-styles" role="group" aria-label="H3 visual style"><span>H3 style</span><button type="button" data-h3-style="dark-fantasy" aria-pressed="true">Dark fantasy</button><button type="button" data-h3-style="bioluminescent" aria-pressed="false">Bioluminescent</button></div>
         <p class="h3-showcase-status" id="h3-showcase-status" role="status" aria-live="polite"></p>
       </div>
     </section>
@@ -167,17 +167,18 @@
   const timeline = document.getElementById('h3-showcase-timeline');
   const output = document.getElementById('h3-showcase-time');
   const status = document.getElementById('h3-showcase-status');
-  const styles = { 'dark-fantasy': 'Dark fantasy', bioluminescent: 'Bioluminescent', clay: 'Clay animation' };
+  const styles = { 'dark-fantasy': 'Dark fantasy', bioluminescent: 'Bioluminescent' };
   const origin = 'https://alaya-lab.github.io/AlayaCrafter/assets/h3-showcase/';
   let running = false, updating = false, pending = false, generation = 0, raf = 0;
-  const clock = t => '0:' + String(Math.floor(t || 0)).padStart(2, '0');
+  let visible = false, visitorPaused = false, displaced = false;
+  const clock = t => '0:' + String(Math.floor(t || 0)).padStart(2, '0') + '.' + (Math.floor((t || 0) * 10) % 10);
   function reflect() {
     const t = master.currentTime || 0;
     timeline.value = String(t);
-    output.value = clock(t) + ' / 0:14';
+    output.value = clock(t) + ' / 0:14.3';
     playButton.setAttribute('aria-pressed', String(running));
-    playButton.querySelector('span').textContent = running ? 'Pause all' : 'Play all';
-    playButton.querySelector('svg').innerHTML = running ? '<path d="M5 3v10M11 3v10"/>' : '<path d="m5 3 8 5-8 5Z"/>';
+    playButton.querySelector('[data-h3-play-label]').textContent = running ? 'Pause all' : 'Play all';
+    playButton.querySelector('svg').innerHTML = running ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
   }
   function pause() {
     generation++;
@@ -217,6 +218,9 @@
     seek(master.currentTime, master);
     raf = requestAnimationFrame(tick);
   }
+  function autoStart() {
+    if (visible && !visitorPaused && !displaced && !document.hidden && !running && !pending) void play();
+  }
   async function play() {
     if (pending) return;
     const ticket = ++generation;
@@ -236,10 +240,16 @@
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(tick);
     } catch (error) { updating = false; pause(); status.textContent = error.message; }
-    finally { pending = false; if (!running && status.textContent === 'Loading videos…') status.textContent = ''; }
+    finally {
+      pending = false;
+      if (!running && status.textContent === 'Loading videos…') status.textContent = '';
+      if (ticket !== generation && !running && !status.textContent) autoStart();
+    }
   }
-  playButton.addEventListener('click', () => running || pending ? pause() : void play());
-  document.getElementById('h3-showcase-replay').addEventListener('click', () => { pause(); seek(0); void play(); });
+  playButton.addEventListener('click', () => {
+    if (running || pending) { visitorPaused = true; pause(); }
+    else { visitorPaused = false; displaced = false; void play(); }
+  });
   timeline.addEventListener('input', () => seek(Number(timeline.value)));
   // The existing scene player exempts data-ambient videos from its single-film
   // arbitration. This comparison owns their transport and visibility instead.
@@ -247,14 +257,14 @@
     if (!(event.target instanceof HTMLVideoElement)) return;
     if (videos.includes(event.target)) {
       document.querySelectorAll('video:not([data-ambient])').forEach(v => v.pause());
-    } else if (!('ambient' in event.target.dataset)) pause();
+    } else if (!('ambient' in event.target.dataset)) { displaced = true; pause(); }
   }, true);
   videos.forEach(v => {
     v.muted = true;
-    v.addEventListener('play', () => { if (!updating && !running && !pending) void play(); });
-    v.addEventListener('pause', () => { if (!updating && running) pause(); });
+    v.loop = true;
+    v.addEventListener('play', () => { if (!updating && !running && !pending) { visitorPaused = false; displaced = false; void play(); } });
+    v.addEventListener('pause', () => { if (!updating && running) { visitorPaused = true; pause(); } });
     v.addEventListener('seeking', () => { if (!updating && v === master) seek(v.currentTime, v); });
-    v.addEventListener('ended', pause);
   });
   section.querySelectorAll('[data-h3-style]').forEach(button => button.addEventListener('click', async () => {
     const style = button.dataset.h3Style;
@@ -272,8 +282,15 @@
     try { await ready(rendered); if (ticket !== generation) return; seek(time); if (wasRunning) void play(); }
     catch (error) { if (ticket === generation) status.textContent = error.message; }
   }));
-  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
-  new IntersectionObserver(entries => { if (!entries[0].isIntersecting) pause(); }, { threshold: 0 }).observe(section);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); else autoStart(); });
+  new IntersectionObserver(entries => {
+    const entry = entries[0];
+    const share = entry.isIntersecting ? entry.intersectionRect.height / Math.min(entry.boundingClientRect.height, innerHeight) : 0;
+    const nowVisible = share >= .5, entered = nowVisible && !visible;
+    visible = nowVisible;
+    if (!visible) pause();
+    else { if (entered) displaced = false; autoStart(); }
+  }, { threshold: Array.from({ length: 11 }, (_, i) => i / 10) }).observe(section.querySelector('.h3-showcase-grid'));
   window.addEventListener('pagehide', pause);
   reflect();
 })();
