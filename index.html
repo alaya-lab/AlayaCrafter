@@ -61,6 +61,17 @@
 .h3-showcase-status:empty{display:none}
 @media(max-width:700px){.h3-showcase{padding:30px 18px}.h3-showcase-heading{align-items:start;flex-direction:column;gap:10px}.h3-showcase-grid{grid-template-columns:1fr;gap:12px}.h3-showcase-card figcaption{padding:12px 14px}}
 </style>
+<style id="project-author-affiliations">
+.saga-footer-authors{text-align:center}
+.saga-footer-authors .saga-paper-authors{justify-content:center;gap:4px 24px}
+.saga-footer-authors .saga-paper-corresponding{flex-wrap:nowrap;gap:4px 32px;margin-top:6px}
+.saga-footer-authors .saga-paper-authors sup{margin-left:3px;font-size:.62em;line-height:1}
+.saga-paper-affiliations{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;list-style:none;margin:18px 0 0;padding:0;color:#aeb6c6;font:400 13px/1.55 var(--sans)}
+.saga-paper-affiliations li{display:inline-flex;align-items:baseline;gap:4px}
+.saga-paper-affiliations sup{position:relative;top:-.4em;font-size:.72em;line-height:1}
+.saga-paper-author-note{margin:14px 0 2px;color:#aeb6c6;font:400 12px/1.5 var(--sans)}
+@media(max-width:600px){.saga-footer-authors .saga-paper-authors{gap:2px 18px}.saga-footer-authors .saga-paper-corresponding{gap:4px 8px}.saga-footer-authors .saga-paper-corresponding a{font-size:clamp(10.4px,3.25vw,15px)}.saga-paper-affiliations{font-size:11px;gap:6px 14px;margin-top:14px}.saga-paper-author-note{font-size:11px}}
+</style>
 </head>
 <body class="library-page saga-page">
   <a class="skip-link" href="https://alaya-lab.github.io/AlayaCrafter/#main">Skip to content</a>
@@ -142,18 +153,27 @@
   </main>
   <footer class="site-footer">
     <div class="wrap saga-footer-authors">
-      <ul class="saga-paper-authors" aria-label="Authors">
-        <li><a href="https://scholar.google.com/citations?user=lwuwuAYAAAAJ" target="_blank" rel="noopener noreferrer">Yonghao Yu</a></li>
-        <li><a href="https://auroraryan0301.github.io/" target="_blank" rel="noopener noreferrer">Ruihan Yu</a></li>
-        <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer">Sho Kuno</a></li>
-        <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer">Muyao Niu</a></li>
-        <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer">Yu-Ju Tsai</a></li>
-        <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer">Zheng-Hui Huang</a></li>
-        <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer">Runyi Li</a></li>
-        <li><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank" rel="noopener noreferrer">Ming-Hsuan Yang</a></li>
-        <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer">Kaipeng Zhang</a></li>
-        <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer">Zhixiang Wang</a></li>
+      <ul class="saga-paper-authors saga-paper-primary" aria-label="Authors">
+        <li><a href="https://scholar.google.com/citations?user=lwuwuAYAAAAJ" target="_blank" rel="noopener noreferrer"><span>Yonghao Yu</span><sup>1,2</sup></a></li>
+        <li><a href="https://auroraryan0301.github.io/" target="_blank" rel="noopener noreferrer"><span>Ruihan Yu</span><sup>1,2</sup></a></li>
+        <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer"><span>Sho Kuno</span><sup>1,2</sup></a></li>
+        <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer"><span>Muyao Niu</span><sup>1,2</sup></a></li>
+        <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer"><span>Yu-Ju Tsai</span><sup>3,4</sup></a></li>
+        <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer"><span>Zheng-Hui Huang</span><sup>1</sup></a></li>
+        <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer"><span>Runyi Li</span><sup>1,2</sup></a></li>
       </ul>
+      <ul class="saga-paper-authors saga-paper-corresponding" aria-label="Corresponding authors">
+        <li><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank" rel="noopener noreferrer"><span>Ming-Hsuan Yang</span><sup>4†</sup></a></li>
+        <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer"><span>Kaipeng Zhang</span><sup>1†</sup></a></li>
+        <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer"><span>Zhixiang Wang</span><sup>1†</sup></a></li>
+      </ul>
+      <ul class="saga-paper-affiliations" aria-label="Author affiliations">
+        <li><sup>1</sup><span>Alaya Lab</span></li>
+        <li><sup>2</sup><span>The University of Tokyo</span></li>
+        <li><sup>3</sup><span>Institute of Science Tokyo</span></li>
+        <li><sup>4</sup><span>University of California, Merced</span></li>
+      </ul>
+      <p class="saga-paper-author-note">† Corresponding authors</p>
     </div>
     <div class="wrap footer-inner"><a class="footer-brand" href="https://alayalab.ai" aria-label="AlayaLab website"><img src="assets/alaya-logo.png" alt="" width="34" height="34"><div><strong>AlayaLab</strong><span>AlayaCrafter</span></div></a><div class="footer-links"><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Space asset library</a><a href="https://alayalab.ai">AlayaLab</a></div></div>
   </footer>
