@@ -1,34 +1,92 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <base href="https://alayacraftertest.y0uroy.chatgpt.site/alayacrafter/">
+  <link rel="canonical" href="https://alaya-lab.github.io/AlayaCrafter/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AlayaCrafter — an Alaya Lab project. Project page coming soon.">
-  <title>AlayaCrafter | Alaya Lab</title>
-  <style>
-    :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: #0b0d12; color: #eef0f5; }
-    main { min-height: 100svh; display: grid; place-items: center; padding: 56px 24px; }
-    section { width: 100%; max-width: 880px; text-align: center; }
-    .eyebrow { margin: 0 0 28px; color: #969dab; letter-spacing: .18em; font-size: 12px; text-transform: uppercase; }
-    h1 { margin: 0; font-size: clamp(44px, 8vw, 84px); font-weight: 650; line-height: 1.12; letter-spacing: -.055em; overflow-wrap: anywhere; }
-    .lab { margin: 26px 0 0; color: #a9bbfb; font-size: 20px; }
-    .status { margin: 52px 0 12px; color: #cdd2dc; font-size: 18px; }
-    .note { margin: 0; color: #818998; font-size: 14px; line-height: 1.7; }
-    footer { margin-top: 64px; color: #7c879a; font-size: 12px; }
-  </style>
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="description" content="AlayaCrafter: Open-source 3D Foundation Model for AI-Native Game Engine.">
+  <title>AlayaCrafter: Open-source 3D Foundation Model for AI-Native Game Engine</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="space-feature.css">
+  <link rel="stylesheet" href="library.css">
+  <link rel="stylesheet" href="saga.css?v=geometry-v52-r1-20261011">
+  <script type="module" src="saga.js?v=geometry-v52-r1-20261011"></script>
 </head>
-<body>
-  <main>
-    <section aria-labelledby="project-title">
-      <p class="eyebrow">Project Page</p>
-      <h1 id="project-title">AlayaCrafter</h1>
-      <p class="lab">Alaya Lab</p>
-      <p class="status">Coming soon.</p>
-      <p class="note">Project details, demonstrations, and paper will be added here.</p>
-      <footer>AlayaCrafter · Alaya Lab</footer>
+<body class="library-page saga-page">
+  <a class="skip-link" href="https://alaya-lab.github.io/AlayaCrafter/#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <div class="brand" aria-label="AlayaCrafter"><img src="assets/alaya-logo.png" alt="" width="28" height="28"><span>AlayaCrafter</span></div>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="https://alaya-lab.github.io/AlayaCrafter/#saga">Twelve acts</a><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Asset library</a><a href="https://github.com/AlayaLab">AlayaLab</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="saga-paper-hero" aria-labelledby="saga-heading">
+      <div class="wrap">
+        <h1 id="saga-heading" style="font-size:clamp(40px,4.5vw,64px);text-wrap:balance">A Space Game Created By AI</h1>
+      </div>
+    </section>
+    <section class="saga-trailer" aria-label="Trailer">
+      <div class="saga-trailer-frame" data-trailer-state="cover">
+        <video id="saga-trailer" playsinline preload="none" data-trailer-src="assets/saga/saga_trailer_v16_restore_gray.mp4" poster="assets/saga/saga_trailer_title_v10.svg?v=story-v53-r1-20261012" tabindex="-1" aria-label="Space Saga official trailer"></video>
+        <div id="saga-trailer-cover" class="saga-trailer-cover">
+          <div class="saga-trailer-titles"><span>AlayaCrafter</span><h2>Space Saga</h2></div>
+          <button type="button" id="saga-trailer-sound" aria-controls="saga-trailer"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="11" height="11" fill="currentColor" style="width:11px;height:11px;flex:none"><path d="M8 5v14l11-7z"/></svg><span data-play-label>Play trailer</span></button>
+          <p id="saga-trailer-status" class="saga-trailer-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="wrap saga-trailer-caption"><p class="small-note">Space Saga · Official trailer</p></div>
+    </section>
+    <section class="saga-project-context" aria-label="About this showcase">
+      <div class="wrap">
+        <div class="saga-project-summary">
+          <dl class="library-stats"><div><dt>Acts</dt><dd>12</dd></div><div><dt>Generated assets</dt><dd>123</dd></div></dl>
+        </div>
+        <div class="saga-credits"><p>Produced by AlayaCrafter at <a href="https://github.com/AlayaLab">AlayaLab</a>.</p><p>Production workflow, tools and models — open source soon.</p></div>
+      </div>
+    </section>
+    <section id="saga" class="workflow-section section-divider" aria-labelledby="saga-title">
+      <div class="wrap">
+        <div class="workflow-chain" aria-label="Workflow: generate meshes, assemble and rig, animate, apply materials"><div><span>01</span> Generate meshes</div><b aria-hidden="true">→</b><div><span>02</span> Assemble &amp; rig</div><b aria-hidden="true">→</b><div><span>03</span> Animate</div><b aria-hidden="true">→</b><div><span>04</span> Apply materials</div></div>
+        <div class="workflow-selection-heading"><span class="label">CHOOSE AN ACT</span><span>Explore every scene before and after materials.</span></div>
+        <div class="workflow-tabs" role="tablist" aria-label="Acts"><button type="button" id="saga-tab-act7_moon_base" role="tab" aria-selected="true" aria-controls="saga-panel" tabindex="0" data-case="act7_moon_base" class="selected"><img src="assets/saga/act7_moon_base-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">01 <span>14.4 s</span></span><strong>The supply run</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act8_pirate_ambush" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act8_pirate_ambush"><img src="assets/saga/act8_pirate_ambush-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">02 <span>14.4 s</span></span><strong>Ice-belt ambush</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act11_first_contact" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act11_first_contact"><img src="assets/saga/act11_first_contact-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">03 <span>14.4 s</span></span><strong>First contact</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act9_hive_awakens" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act9_hive_awakens"><img src="assets/saga/act9_hive_awakens-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">04 <span>14.4 s</span></span><strong>The hive awakens</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act1_station_siege" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act1_station_siege"><img src="assets/saga/act1_station_siege-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">05 <span>14.4 s</span></span><strong>The station under siege</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act2_ground_war" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act2_ground_war"><img src="assets/saga/act2_ground_war-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">06 <span>14.4 s</span></span><strong>Ground war</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act3_fleet_battle" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act3_fleet_battle"><img src="assets/saga/act3_fleet_battle-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">07 <span>14.4 s</span></span><strong>Fleet engagement</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act4_carrier_strike" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act4_carrier_strike"><img src="assets/saga/act4_carrier_strike-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">08 <span>14.4 s</span></span><strong>Carrier strike</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act10_exodus" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act10_exodus"><img src="assets/saga/act10_exodus-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">09 <span>14.4 s</span></span><strong>Exodus from the ring</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act5_shipyard_sortie" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act5_shipyard_sortie"><img src="assets/saga/act5_shipyard_sortie-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">10 <span>14.4 s</span></span><strong>Sortie</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act6_dyson_siege" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act6_dyson_siege"><img src="assets/saga/act6_dyson_siege-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">11 <span>14.4 s</span></span><strong>Siege of the Dyson sphere</strong><span class="workflow-card-route">Gray · Materials</span></button><button type="button" id="saga-tab-act12_new_dawn" role="tab" aria-selected="false" aria-controls="saga-panel" tabindex="-1" data-case="act12_new_dawn"><img src="assets/saga/act12_new_dawn-hd-r2-material-poster.webp" alt="" loading="lazy" width="350" height="200"><span class="workflow-card-meta">12 <span>14.4 s</span></span><strong>A new dawn</strong><span class="workflow-card-route">Gray · Materials</span></button></div>
+        <div id="saga-panel" class="workflow-panel" role="tabpanel" aria-labelledby="saga-tab-act7_moon_base">
+        <div class="workflow-media-bar comparison-bar"><span>ONE TIMELINE · TWO VIEWS</span><div class="video-modes" data-workflow-modes role="group" aria-label="Enlarge a rendering stage"><button type="button" data-view="all" aria-pressed="true">Both views</button><button type="button" data-view="gray" aria-pressed="false">Gray mesh</button><button type="button" data-view="material" aria-pressed="false">Our mesh + materials</button></div></div>
+      <div id="saga-views" class="workflow-views" data-view="all">
+            <article class="workflow-stage" data-stage="gray"><header><span class="index">01</span><div><h4 data-geometry-title>Gray mesh</h4><span data-geometry-description>Our generated geometry</span></div><div class="video-modes geometry-modes" data-gray-mode-controls role="group" aria-label="Geometry rendering" hidden><button type="button" data-geometry-mode="gray" aria-pressed="true">Gray mesh</button><button type="button" data-geometry-mode="normals" aria-pressed="false">Normals</button></div></header><div class="workflow-stage-image"><video id="saga-video-gray" playsinline muted preload="none" aria-label="Generated geometry in gray"></video><div class="stage-empty" hidden><span class="stage-empty-mark" aria-hidden="true">◇</span><strong>View unavailable</strong><p></p></div></div><a class="stage-source" target="_blank" rel="noopener" hidden>Source <span aria-hidden="true">↗</span></a></article>
+            <article class="workflow-stage" data-stage="material"><header><span class="index">02</span><div><h4>Our mesh + materials</h4><span>Materials on the 3D assets</span></div></header><div class="workflow-stage-image"><video id="saga-video-material" playsinline muted preload="none" aria-label="Our generated meshes with materials"></video><div class="stage-empty" hidden><span class="stage-empty-mark" aria-hidden="true">◇</span><strong>View unavailable</strong><p></p></div></div><a class="stage-source" target="_blank" rel="noopener" hidden>Source <span aria-hidden="true">↗</span></a></article>
+          </div>
+          <div class="workflow-transport"><div class="workflow-playback"><button type="button" id="saga-play" aria-label="Play the rendering stages together" aria-pressed="false"><span aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span>Play all</span></button><output id="saga-time" for="saga-timeline">0:00 / 0:14</output><span class="workflow-sync-label">SHARED TIMELINE</span></div><input id="saga-timeline" type="range" min="0" max="14.375" step="0.0416666667" value="0" aria-label="Shared timeline"></div>
+          <p id="saga-status" class="comparison-status" role="status" hidden></p>
+          <div class="workflow-chapters"><span class="label">JUMP TO A MOMENT</span><div id="saga-chapters" role="group" aria-label="Moments in this act"></div></div>
+          <div class="workflow-description"><div><span id="saga-duration" class="index">14.4 SECONDS / ACT I · THE SUPPLY RUN</span><h3 id="saga-title">A supply lander touches down at lunar dawn.</h3></div><div><p id="saga-copy">A supply lander arrives at lunar dawn as a rover and its crew prepare the outpost.</p><a id="saga-source" class="workflow-source" hidden>Source</a></div></div>
+        </div>
+        <p class="space-assembly-note">All twelve scenes use AlayaCrafter generated meshes with their original topology.</p>
+      </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <div class="wrap saga-footer-authors">
+      <ul class="saga-paper-authors" aria-label="Authors">
+        <li><a href="https://scholar.google.com/citations?user=lwuwuAYAAAAJ" target="_blank" rel="noopener noreferrer">Yonghao Yu</a></li>
+        <li><a href="https://auroraryan0301.github.io/" target="_blank" rel="noopener noreferrer">Ruihan Yu</a></li>
+        <li><a href="https://shokuno5.github.io/" target="_blank" rel="noopener noreferrer">Sho Kuno</a></li>
+        <li><a href="https://myniuuu.github.io/" target="_blank" rel="noopener noreferrer">Muyao Niu</a></li>
+        <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer">Runyi Li</a></li>
+        <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer">Kaipeng Zhang</a></li>
+        <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer">Zhixiang Wang</a></li>
+      </ul>
+    </div>
+    <div class="wrap footer-inner"><a class="footer-brand" href="https://github.com/AlayaLab" aria-label="AlayaLab on GitHub"><img src="assets/alaya-logo.png" alt="" width="34" height="34"><div><strong>AlayaLab</strong><span>AlayaCrafter</span></div></a><p>Explicit geometry. Generative worlds.</p><div class="footer-links"><a href="https://alaya-lab.github.io/AlayaCrafter/space-kit.html">Space asset library</a><a href="https://github.com/AlayaLab">AlayaLab</a></div></div>
+  </footer>
+  <noscript><p class="noscript-note">Enable JavaScript to play the acts.</p></noscript>
 </body>
 </html>
