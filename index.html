@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="space-feature.css">
   <link rel="stylesheet" href="library.css">
-  <link rel="stylesheet" href="saga.css?v=geometry-v52-r1-20261011">
-  <script type="module" src="saga.js?v=geometry-v52-r1-20261011"></script>
+  <link rel="stylesheet" href="saga.css?v=topology-library-v61-r1-20261012">
+  <script type="module" src="saga.js?v=topology-library-v61-r1-20261012"></script>
 <style id="project-header-layout">
 .saga-paper-hero{padding:84px 24px 12px;text-align:center}
 .saga-paper-hero .wrap{max-width:1080px}
@@ -79,7 +79,7 @@
       <div class="wrap">
         <h1 id="saga-heading">Open-source 3D Foundation Model <span>for AI-Native Game Engine</span></h1>
         <details class="project-tldr">
-          <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why an AI-Native Game Engine?</span></summary>
+          <summary><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg><span>TL;DR · Why This Model?</span></summary>
           <div class="project-tldr-content">
             <p><strong>Agent-efficient geometry.</strong>Compact meshes are designed to lower agents' data and token costs compared with dense high-poly assets.</p>
             <p><strong>Structure for video models.</strong>Our scene renders already give H3 enough structure to add appearance and detail.</p>
@@ -114,7 +114,7 @@
         <div id="saga-panel" class="workflow-panel" role="tabpanel" aria-labelledby="saga-tab-act7_moon_base">
         <div class="workflow-media-bar comparison-bar"><span>ONE TIMELINE · TWO VIEWS</span><div class="video-modes" data-workflow-modes role="group" aria-label="Enlarge a rendering stage"><button type="button" data-view="all" aria-pressed="true">Both views</button><button type="button" data-view="gray" aria-pressed="false">Gray mesh</button><button type="button" data-view="material" aria-pressed="false">Our mesh + materials</button></div></div>
       <div id="saga-views" class="workflow-views" data-view="all">
-            <article class="workflow-stage" data-stage="gray"><header><span class="index">01</span><div><h4 data-geometry-title>Gray mesh</h4><span data-geometry-description>Our generated geometry</span></div><div class="video-modes geometry-modes" data-gray-mode-controls role="group" aria-label="Geometry rendering" hidden><button type="button" data-geometry-mode="gray" aria-pressed="true">Gray mesh</button><button type="button" data-geometry-mode="normals" aria-pressed="false">Normals</button></div></header><div class="workflow-stage-image"><video id="saga-video-gray" playsinline muted preload="none" aria-label="Generated geometry in gray"></video><div class="stage-empty" hidden><span class="stage-empty-mark" aria-hidden="true">◇</span><strong>View unavailable</strong><p></p></div></div><a class="stage-source" target="_blank" rel="noopener" hidden>Source <span aria-hidden="true">↗</span></a></article>
+            <article class="workflow-stage" data-stage="gray"><header><span class="index">01</span><div><h4 data-geometry-title>Gray mesh</h4><span data-geometry-description>Our generated geometry</span></div><div class="video-modes geometry-modes" data-gray-mode-controls role="group" aria-label="Geometry rendering" hidden><button type="button" data-geometry-mode="gray" aria-pressed="true">Gray mesh</button><button type="button" data-geometry-mode="topology" aria-pressed="false">Topology</button></div></header><div class="workflow-stage-image"><video id="saga-video-gray" playsinline muted preload="none" aria-label="Generated geometry in gray"></video><div class="stage-empty" hidden><span class="stage-empty-mark" aria-hidden="true">◇</span><strong>View unavailable</strong><p></p></div></div><a class="stage-source" target="_blank" rel="noopener" hidden>Source <span aria-hidden="true">↗</span></a></article>
             <article class="workflow-stage" data-stage="material"><header><span class="index">02</span><div><h4>Our mesh + materials</h4><span>Materials on the 3D assets</span></div></header><div class="workflow-stage-image"><video id="saga-video-material" playsinline muted preload="none" aria-label="Our generated meshes with materials"></video><div class="stage-empty" hidden><span class="stage-empty-mark" aria-hidden="true">◇</span><strong>View unavailable</strong><p></p></div></div><a class="stage-source" target="_blank" rel="noopener" hidden>Source <span aria-hidden="true">↗</span></a></article>
           </div>
           <div class="workflow-transport"><div class="workflow-playback"><button type="button" id="saga-play" aria-label="Play the rendering stages together" aria-pressed="false"><span aria-hidden="true"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span>Play all</span></button><output id="saga-time" for="saga-timeline">0:00 / 0:14</output><span class="workflow-sync-label">SHARED TIMELINE</span></div><input id="saga-timeline" type="range" min="0" max="14.375" step="0.0416666667" value="0" aria-label="Shared timeline"></div>
@@ -150,6 +150,7 @@
         <li><a href="https://liagm.github.io/" target="_blank" rel="noopener noreferrer">Yu-Ju Tsai</a></li>
         <li><a href="https://brian90709.github.io/" target="_blank" rel="noopener noreferrer">Zheng-Hui Huang</a></li>
         <li><a href="https://lirunyi2001.github.io/" target="_blank" rel="noopener noreferrer">Runyi Li</a></li>
+        <li><a href="https://faculty.ucmerced.edu/mhyang/" target="_blank" rel="noopener noreferrer">Ming-Hsuan Yang</a></li>
         <li><a href="https://kpzhang93.github.io/" target="_blank" rel="noopener noreferrer">Kaipeng Zhang</a></li>
         <li><a href="https://lightchaserx.github.io/" target="_blank" rel="noopener noreferrer">Zhixiang Wang</a></li>
       </ul>
